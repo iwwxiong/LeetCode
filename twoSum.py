@@ -1,8 +1,9 @@
+#! /usr/bin/env python3
 # coding: utf-8
 
 import unittest
 
-# Two Sum My Submissions Question Solution 
+# Two Sum My Submissions Question Solution
 
 # Given an array of integers, find two numbers such that they add up to a specific target number.
 
@@ -13,12 +14,17 @@ import unittest
 # Input: numbers={2, 7, 11, 15}, target=9
 # Output: index1=1, index2=2
 
+# 316 ms
+
+# 实现思路：
+# 循环列表中的元素，用目标减去该元素结果保存在新的列表中。
+
 def two_sum(nums, target):
 	"""
 	nums是无序数组
 	"""
 	result = []
-	for i in range(0, len(nums)):	
+	for i in range(0, len(nums)):
 		if i> 0 and nums[i] in result:
 			return result.index(nums[i])+1, i+1
 
