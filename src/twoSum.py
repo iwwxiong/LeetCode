@@ -19,23 +19,25 @@ import unittest
 # 实现思路：
 # 循环列表中的元素，用目标减去该元素结果保存在新的列表中。
 
-def two_sum(nums, target):
-	"""
-	nums是无序数组
-	"""
-	result = []
-	for i in range(0, len(nums)):
-		if i> 0 and nums[i] in result:
-			return result.index(nums[i])+1, i+1
 
-		result.append(target-nums[i])
+class Solution(object):
+    def two_sum(nums, target):
+        """
+        nums是无序数组
+        """
+        result = []
+        for i in range(0, len(nums)):
+            if i > 0 and nums[i] in result:
+                return result.index(nums[i])+1, i+1
+
+            result.append(target-nums[i])
 
 
 class Mytest(unittest.TestCase):
-	def test_two_sum(self):
-		self.assertEqual(two_sum([3,2,4], 6), (2,3))
-		self.assertEqual(two_sum([-1,-2,-3,-4,-5,-6], -8), (3, 5))
+    def test_two_sum(self):
+        self.assertEqual(Solution().two_sum([3,2,4], 6), (2,3))
+        self.assertEqual(Solution().two_sum([-1,-2,-3,-4,-5,-6], -8), (3, 5))
 
 
 if __name__ == "__main__":
-	unittest.main()
+    unittest.main()

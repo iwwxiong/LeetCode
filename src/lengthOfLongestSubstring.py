@@ -28,8 +28,8 @@ class Solution(object):
             if value in mapping:
                 start = mapping[value] if start < mapping[value] else start
 
-            temp = index-start
-            if temp>sub_length:
+            temp = index - start
+            if temp > sub_length:
                 sub_length = temp
 
             mapping[value] = index
