@@ -21,5 +21,7 @@ LeetCode练习
    algorithms/findMedianSortedArrays
    algorithms/longestPalindrome
    algorithms/zigzagConvert
+   algorithms/reverseInteger
+   algorithms/stringToInteger
 
 
